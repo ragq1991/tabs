@@ -1,0 +1,33 @@
+<div class="container">
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a [class]="tabActivity[0]" href="/navigator?tab=0">Income</a>
+  </li>
+  <li class="nav-item">
+    <a [class]="tabActivity[1]" href="/navigator?tab=1">Outcome</a>
+  </li>
+  <li class="nav-item">
+    <a [class]="tabActivity[2]" href="/navigator?tab=2">Loans</a>
+  </li>
+  <li class="nav-item">
+    <a [class]="tabActivity[3]" href="/navigator?tab=3">Investments</a>
+  </li>
+</ul>
+<br>
+<div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Amount</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of arr">
+    <tr>
+      <td>{{item.name.first}} {{item.name.last}}</td>
+      <td>{{item.amount}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
